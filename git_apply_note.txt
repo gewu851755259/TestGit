@@ -1,0 +1,18 @@
+git init                    初始化本地git仓库，会生成隐藏文件夹/.git，/.git会保存版本管理的所有信息（命令行提示：Initialized empty Git repository）；
+
+git status                  查看此次修改的文件状态，git命令行窗口中，红色的代表做了修改但未添加到缓存区，绿色的代表已加入到缓存区；
+
+                            红色状态的文件又分两种，一种是已经和仓库建立关联的文件（tracked files），一种是未做关联的（Untracked files），例如刚新建的文件；
+
+git add <File>              添加修改文件到缓存区，用git status查看时可发现颜色变为绿色；
+
+git add -u                  添加所有已关联文件（tracked files）到缓存区；
+
+git add -A                  强制添加所有文件到缓存区；
+
+git remote add origin <url> 添加名字为origin的远程仓库地址，名字可以自己定义，一般主的用origin；
+
+git remote -v               查看所有远程仓库的地址；
+
+git commit -m "beizhu"      保存缓存区文件到本地仓库，并添加备注；
+
