@@ -16,3 +16,22 @@ git remote -v               查看所有远程仓库的地址；
 
 git commit -m "beizhu"      保存缓存区文件到本地仓库，并添加备注；
 
+git push -u origin master   向远程仓库的master分支提交代码；
+
+git log                     查看本地仓库的所有commit记录；
+
+git log origin/master       查看远程仓库的所有commit记录；
+
+git log --graph             查看仓库线性的所有commit记录；
+
+git reset <File>            可以把某个文件从缓存区中拉出来，git status查看效果会从绿变红；
+
+git reset --hard <Commit>   将代码还原到之前commit的某一个版本；
+
+git branch                  查看所有本地仓库分支；
+
+git branch -a               查看所有本地/远程仓库分支；
+
+git branch <name>           创建对应name的分支；
+
+
