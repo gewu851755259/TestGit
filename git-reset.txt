@@ -1,0 +1,7 @@
+
+git reset <commit>                                             将代码还原到某个commit
+
+git reset HEAD [dir/file]									   将某个文件夹/文件还原
+
+git reset HEAD^^											   将代码还原到前两次的commit状态，有几个^就是前几次
+

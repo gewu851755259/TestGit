@@ -1,0 +1,41 @@
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+
+
+
+git checkout -b <branch name>                              新建新分支并直接切换到该分支上
+
+git checkout --patch <branch name> <file path>             将某个分支的某个文件合并到该分支上
+
+git checkout .                                             还原已修改但未添加到缓存区(add)的所有文件
+
+git checkout <file path|mkdir>                             还原已修改但未添加到缓存区(add)的某个文件或某个文件夹
+
+git checkout <branch name>                                 切换到某个已经存在的分支(切换前必须先将本分支的修改commit)
+
+
+

@@ -1,0 +1,7 @@
+
+git log --pretty=oneline                             简洁显示所有线上log
+
+git log --pretty=oneline <file-name>                 简洁显示某个文件的线上所有修改log
+
+git log --graph                                      显示合并线条图
+

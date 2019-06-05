@@ -1,0 +1,9 @@
+
+git show <commit>                                                  显示某次提交的所有修改文件的具体修改信息
+
+git show <commit> <file-name>                                      显示某个文件在某次提交的具体修改信息
+
+git show <tag>                                                     显示某个tag的具体修改信息
+
+
+
