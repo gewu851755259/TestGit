@@ -1,0 +1,40 @@
+git rebase 命令用于修改commit信息
+
+
+  git commit --amend                             修改最后一次保存的commit信息
+
+------------------------------------------------------------------------------------------------------
+
+  git rebase -i HEAD~{n}                         修改前n此的commit信息
+    出现编辑页面:
+      1. 将要编辑的commit记录前面的pick改为edit
+      2. 如果只是合并某两次的commit记录，pick改为
+
+      p, pick = use commit
+      r, reword = use commit, but edit the commit message
+      e, edit = use commit, but stop for amending
+      s, squash = use commit, but meld into previous commit
+      f, fixup = like “squash”, but discard this commit’s log message
+      x, exec = run command (the rest of the line) using shell
+      d, drop = remove commit
+
+    保存退出后（master）分支会变成（master|REBASE-m/3），m一定大于等于1，小于等于3
+
+  然后再次调用git commit --amend                  修改改为edit或其他标签的commit信息，就是上面的第m条
+
+  git rebase --continue                          继续向下修改
+    分支由 （master|REBASE-m/3）变为（master|REBASE-t/3），t一定大于m
+    但如果之后m之后没有要修改的commit，分支将重新变为（master），代表将要修改的都改完了
+
+  git rebase --skip                              跳过这一步的修改
+
+  git rebase --quit                              退出，但分支不一定是（master）
+
+  git rebase --abort                             中止，使流产
+
+  rm -rf .git/rebase-merge/                      删除rebase生成文件也可退出rebase分支 
+
+------------------------------------------------------------------------------------------------------
+
+  git push origin <you_branch_name> -f           修改完成之后一定要强制推送，不能再pull后push
+    注意: 这一定要求你在修改期间，没有别人往远程仓库push，且本地代码和远程仓库代码一样，也就是最新的
