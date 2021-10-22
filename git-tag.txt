@@ -57,4 +57,7 @@ git push origin [tagname]                                              分享标
 
 git push origin --tags                                                 一次分享所有标签到远程仓库
 
+git tag -d <tag name>                                                  删除本地仓库tag
+
+git push origin :refs/tags/<tag name>                                  删除已经push到远程仓库的tag
 

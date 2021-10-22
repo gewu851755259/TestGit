@@ -1,0 +1,3 @@
+
+
+git push origin --delete track_service   // 删除远程仓库的某个分支
